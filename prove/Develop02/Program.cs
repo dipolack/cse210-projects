@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 
 class Entry {
@@ -24,7 +23,9 @@ class Journal {
         "If I had one thing I could do over today, what would it be?",
         "What is something I can do today that my future self will thank me for?",
         "What blessings have I seen today?",
-        "What are 5 things that I can cherish about my friends or family today?"
+        "What are 5 things that I can cherish about my friends or family today?",
+        "Did you perform an act of kindness yet?",
+        "Have you felt the promptings of the holy ghost today? "
     };
 
     public void AddEntry() {
@@ -67,7 +68,7 @@ class Journal {
             }
             Console.WriteLine("Journal loaded from " + filename);
         } else {
-            Console.WriteLine("File not found.");
+            Console.WriteLine("I couldn't find that file!");
         }
     }
 
@@ -92,7 +93,7 @@ class Program {
         Console.WriteLine("Welcome to your very own Journal Application!");
         Console.WriteLine("1. Write a new entry");
         Console.WriteLine("2. Display journal");
-        Console.WriteLine("3. Load journal previous Journal");
+        Console.WriteLine("3. Load a previous Journal");
         Console.WriteLine("4. Save my journal");
         Console.WriteLine("5. Exit ");
         Console.Write("Enter your choice: ");
@@ -125,3 +126,11 @@ class Program {
     }
 }
 }
+
+//I found some tutorials on classes to be very helpful during this assignment.
+//One of them suggested this website: https://learn.microsoft.com/en-us/dotnet/api/system.io.file?view=net-5.0
+//https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic?view=net-7.0
+//Which is now my go to when learning because it Explains the available tools and gives a lot of resources
+//that I personally consider very valuable for this class.
+//The tutorial that helped me understand better this topic was this one:
+//https://www.youtube.com/watch?v=t2SPg6IuT3k&t=362s
