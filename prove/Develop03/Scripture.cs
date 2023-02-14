@@ -41,7 +41,7 @@ class Scripture
 
                         }
 
-            }
+                }
 
         Console.WriteLine ();
     }
