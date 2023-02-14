@@ -1,11 +1,11 @@
 using System;
-
 class Scripture 
 {
     private string reference;
     private string text;
 
     private List <string> hiddenWords;
+    private string v;
 
     public Scripture (string reference, string text)
 
@@ -16,16 +16,55 @@ class Scripture
         
     }
 
+    public Scripture(string v)
+    {
+        this.v = v;
+    }
+
     public void DisplayScripture ()
 
     {
+        Console.WriteLine (reference);
+            string [] words = text.Split ();
+             foreach (string word in words)
+                {
+                    if (hiddenWords.Contains(word))
+                    {
+                        Console.Write ("____");
 
-        //write line
-        //string words
-        //hiddenwords
-        //if words are hidden console write
-        //generate random
-        //make sure to run program
+                    }
+
+                        else
+
+                        {
+                         Console.Write(word +"");
+
+                        }
+
+            }
+
+        Console.WriteLine ();
+    }
+
+    public void HideWord ()
+    {
+
+        string [] words = text.Split ();
+        Random rand = new Random ();
+
+        int index = rand.Next (words.Length);
+        string wordToHide = words [index];
+
+        hiddenWords.Add(wordToHide);
+    }
+
+    public bool AllWordsHidden ()
+
+    {
+        string [] words = text.Split ();
+
+        return hiddenWords.Count == words.Length;
 
     }
+
 }
