@@ -57,7 +57,7 @@ class Program
     EncouragementActivity encouragementActivity = new EncouragementActivity
     {
         Name = "Encouragement Activity",
-        Description = "This activity will help you remind yourself with kind affirmations how valuable/capable you are.",
+        Description = "This activity will help you remind yourself with kind encouraging messages how valuable/capable you are.",
         Duration = 5
     };
 
