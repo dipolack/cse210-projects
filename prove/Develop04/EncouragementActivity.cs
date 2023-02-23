@@ -1,3 +1,5 @@
+
+//Aditional activity for exceding requirements
 public class EncouragementActivity : Activity
 {
     public override void RunActivity()
