@@ -1,10 +1,15 @@
 using System;
 using System.Collections.Generic;
 
-ListingActivity listingActivity = new ListingActivity
+class program
+{
+    public static void Main()
+    {
+    // Create the activities
+    ListingActivity listingActivity = new ListingActivity
     {
         Name = "Listing Activity",
-        Description = "This activity will help you reflect on the good things in your life by listing as many things as you can in a certain area.",
+        Description = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.",
         Duration = 10,
         Prompts = new List<string>
         {
@@ -23,12 +28,11 @@ ListingActivity listingActivity = new ListingActivity
         Duration = 7,
         Prompts = new List<string>
         {
-            "Think of a time when you did something truly selfless.",
             "Think of a time when you stood up for someone else.",
             "Think of a time when you did something really difficult.",
-            "Think of a time when you helped someone in need."
+            "Think of a time when you helped someone in need.",
+            "Think of a time when you did something truly selfless."
         },
-
         Questions = new List<string>
         {
             "Why was this experience meaningful to you?",
@@ -50,16 +54,18 @@ ListingActivity listingActivity = new ListingActivity
         Duration = 5
     };
 
-    // Show the menu and let the user choose an activity
+    // menu to choose activity 1-2-3
+
     Console.WriteLine("Choose an activity:");
     Console.WriteLine("1. Breathing Activity");
     Console.WriteLine("2. Reflection Activity");
     Console.WriteLine("3. Listing Activity");
 
+    // Getting user choice
 
     int choice = int.Parse(Console.ReadLine());
 
-    //conditionals to run the activity chosen by user.. 1-2-3
+    // running chosen activity
 
     if (choice == 1)
         breathingActivity.RunActivity();
@@ -69,3 +75,5 @@ ListingActivity listingActivity = new ListingActivity
         listingActivity.RunActivity();
     else
         Console.WriteLine("Invalid choice!");
+    }
+}

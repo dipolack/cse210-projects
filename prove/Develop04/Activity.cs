@@ -4,6 +4,7 @@
 // -method for running the activity
 
 public abstract class Activity
+
 {
     public string Name { get; set; } //refers to activities
     public string Description { get; set; }
