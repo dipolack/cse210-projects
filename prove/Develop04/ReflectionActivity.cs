@@ -24,9 +24,30 @@ public class ReflectionActivity : Activity
         int promptIndex = random.Next(0, Prompts.Count - 1);
         Console.WriteLine(Prompts[promptIndex]);
 
-        //continue asking questions
-        //ending message
-       
+        for (int i = 0; i < Questions.Count; i++)
+        {
+            Console.WriteLine(Questions[i]);
+            System.Threading.Thread.Sleep(Duration * 1000);
+
+            // Show a spinner while the program is paused
+
+            Console.CursorLeft = 0;
+            Console.Write("|");
+            System.Threading.Thread.Sleep(1000);
+            Console.CursorLeft = 0;
+            Console.Write("/");
+            System.Threading.Thread.Sleep(1000);
+            Console.CursorLeft = 0;
+            Console.Write("-");
+            System.Threading.Thread.Sleep(1000);
+            Console.CursorLeft = 0;
+            Console.Write("\\");
+            System.Threading.Thread.Sleep(1000);
+        }
+
+        // Show the ending message
+        Console.WriteLine("Good job!");
+        Console.WriteLine($"You have completed the {Name} activity for {Duration} seconds.");
+        Console.WriteLine("Thank you for participating.");
     }
 }
-
