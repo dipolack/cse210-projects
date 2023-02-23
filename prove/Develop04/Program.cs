@@ -81,6 +81,8 @@ class Program
         reflectionActivity.RunActivity();
     else if (choice == 3)
         listingActivity.RunActivity();
+    else if (choice == 4)
+        encouragementActivity.RunActivity();
     else
         Console.WriteLine("Invalid choice!");
     }
