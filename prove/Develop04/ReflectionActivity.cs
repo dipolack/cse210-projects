@@ -13,7 +13,7 @@ public class ReflectionActivity : Activity
 
     public override void RunActivity()
     {
-        Console.WriteLine($"Starting {Name} which will last for {Duration} seconds.");
+        Console.WriteLine($"Starting {Name}");
         Console.WriteLine($"Description: {Description}");
         Console.WriteLine("Prepare to begin...");
 

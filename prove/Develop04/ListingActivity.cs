@@ -11,7 +11,7 @@ public class ListingActivity : Activity
     public override void RunActivity()
     {
 
-        Console.WriteLine($"Starting {Name} which will last for {Duration} seconds.");
+        Console.WriteLine($"Starting {Name} ");
         Console.WriteLine($"Description: {Description}");
         Console.WriteLine("Now, prepare to begin...");
 
@@ -20,10 +20,19 @@ public class ListingActivity : Activity
         Random random = new Random();
         int promptIndex = random.Next(0, Prompts.Count - 1);
         Console.WriteLine(Prompts[promptIndex]);
+        System.Threading.Thread.Sleep(Duration * 1000);
 
-        //Continue with giving user seconds to think..
-        // ask them to start listing
-        // ending message
+        Console.WriteLine("Start listing...");
+        int itemCount = 0;
+        while (Duration > 0)
+        {
+            string input = Console.ReadLine();
+            itemCount++;
+            Duration--;
+        }
+
+        Console.WriteLine("Good job!");
+        Console.WriteLine($"You have completed the {Name} activity for {Duration} seconds and listed {itemCount} items.");
+        Console.WriteLine("Thank you for participating.");
     }
 }
-
