@@ -54,12 +54,20 @@ class Program
         Duration = 5
     };
 
+    EncouragementActivity encouragementActivity = new EncouragementActivity
+    {
+        Name = "Encouragement Activity",
+        Description = "This activity will help you remind yourself with kind affirmations how valuable/capable you are.",
+        Duration = 5
+    };
+
     // menu to choose activity 1-2-3
     Console.WriteLine("Welcome to the Mindfulness program created just for you!");
     Console.WriteLine("Choose an activity: ");
     Console.WriteLine("1. Breathing Activity");
     Console.WriteLine("2. Reflection Activity");
     Console.WriteLine("3. Listing Activity");
+    Console.WriteLine("4. Encouragement Activity");
 
     // Getting user choice
 
