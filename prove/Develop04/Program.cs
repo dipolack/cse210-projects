@@ -55,8 +55,8 @@ class program
     };
 
     // menu to choose activity 1-2-3
-
-    Console.WriteLine("Choose an activity:");
+    Console.WriteLine("Welcome to the Mindfulness program created just for you!");
+    Console.WriteLine("Choose an activity: ");
     Console.WriteLine("1. Breathing Activity");
     Console.WriteLine("2. Reflection Activity");
     Console.WriteLine("3. Listing Activity");
