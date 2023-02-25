@@ -58,10 +58,10 @@ class Program
     {
         Name = "Encouragement Activity",
         Description = "This activity will help you remind yourself with kind encouraging messages how valuable/capable you are.",
-        Duration = 5
+        Duration = 10
     };
 
-    // menu to choose activity 1-2-3
+    // menu to choose activity 1-2-3-4
     Console.WriteLine("Welcome to the Mindfulness program created just for you!");
     Console.WriteLine("Choose an activity: ");
     Console.WriteLine("1. Breathing Activity");
