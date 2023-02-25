@@ -34,7 +34,7 @@ public class ListingActivity : Activity
         }
 
         Console.WriteLine("Good job!");
-        Console.WriteLine($"You have completed the {Name} activity for {Duration} seconds and listed {itemCount} items.");
+        Console.WriteLine($"You have completed the {Name} activity for 10 seconds and listed {itemCount} items.");
         Console.WriteLine("Thank you for participating.");
     }
 }
