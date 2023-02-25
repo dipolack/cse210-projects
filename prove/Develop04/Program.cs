@@ -76,13 +76,13 @@ class Program
     // running chosen activity
 
     if (choice == 1)
-        breathingActivity.RunActivity();
+        breathingActivity._RunActivity();
     else if (choice == 2)
-        reflectionActivity.RunActivity();
+        reflectionActivity._RunActivity();
     else if (choice == 3)
-        listingActivity.RunActivity();
+        listingActivity._RunActivity();
     else if (choice == 4)
-        encouragementActivity.RunActivity();
+        encouragementActivity._RunActivity();
     else
         Console.WriteLine("Invalid choice!");
     }

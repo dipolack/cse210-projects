@@ -11,9 +11,9 @@ public class ReflectionActivity : Activity
 
     public List<string> Questions { get; set; }
 
-    public override void RunActivity()
+    public override void _RunActivity()
     {
-        Console.WriteLine($"Starting {Name}");
+        Console.WriteLine($"Starting {Name} for {Duration} seconds.");
         Console.WriteLine($"Description: {Description}");
         Console.WriteLine("Prepare to begin...");
 
@@ -35,13 +35,25 @@ public class ReflectionActivity : Activity
             Console.Write("|");
             System.Threading.Thread.Sleep(1000);
             Console.CursorLeft = 0;
-            Console.Write("/");
+            Console.Write("//");
             System.Threading.Thread.Sleep(1000);
             Console.CursorLeft = 0;
             Console.Write("-");
             System.Threading.Thread.Sleep(1000);
             Console.CursorLeft = 0;
             Console.Write("\\");
+            System.Threading.Thread.Sleep(1000);
+            Console.CursorLeft = 0;
+            Console.Write("//");
+            System.Threading.Thread.Sleep(1000);
+            Console.CursorLeft = 0;
+            Console.Write("-");
+            System.Threading.Thread.Sleep(1000);
+            Console.CursorLeft = 0;
+            Console.Write("\\");
+            System.Threading.Thread.Sleep(1000);
+            Console.CursorLeft = 0;
+            Console.Write("|");
             System.Threading.Thread.Sleep(1000);
         }
 
