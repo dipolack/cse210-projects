@@ -5,10 +5,10 @@
 
 public class BreathingActivity : Activity
 {
-    public override void RunActivity()
+    public override void _RunActivity()
     {
         // Show the starting message
-        Console.WriteLine($"Starting {Name} ");
+        Console.WriteLine($"Starting {Name} for {Duration} seconds.");
         Console.WriteLine($"Description: {Description}");
         Console.WriteLine("Prepare to begin...");
 
@@ -19,11 +19,27 @@ public class BreathingActivity : Activity
         Console.WriteLine("Breathe in...");
         System.Threading.Thread.Sleep(Duration * 1000);
         Console.CursorLeft = 0;
-            Console.Write("|");
+        Console.Write("|");
         Console.WriteLine("Breathe out...");
         System.Threading.Thread.Sleep(Duration * 1000);
         Console.CursorLeft = 0;
-            Console.Write("//");
+        Console.Write("//");
+        Console.WriteLine("Breathe in...");
+        System.Threading.Thread.Sleep(Duration * 1000);
+        Console.CursorLeft = 0;
+        Console.Write("-");
+        Console.WriteLine("Breathe out...");
+        System.Threading.Thread.Sleep(Duration * 1000);
+        Console.CursorLeft = 0;
+        Console.Write("\\");
+        Console.WriteLine("Breathe in...");
+        System.Threading.Thread.Sleep(Duration * 1000);
+        Console.CursorLeft = 0;
+        Console.Write("//");
+        Console.WriteLine("Breathe out...");
+        System.Threading.Thread.Sleep(Duration * 1000);
+        Console.CursorLeft = 0;
+        Console.Write("|");
 
         Console.WriteLine("Good job!");
         Console.WriteLine($"You have completed the {Name} activity for {Duration} seconds.");

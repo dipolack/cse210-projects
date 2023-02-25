@@ -7,19 +7,21 @@
 public class ListingActivity : Activity
 {
     public List<string> Prompts { get; set; }
-
-    public override void RunActivity()
+    public override void _RunActivity()
     {
-
-        Console.WriteLine($"Starting {Name} ");
+        // Show the starting message
+        Console.WriteLine($"Starting {Name}, it will last for {Duration} seconds.");
         Console.WriteLine($"Description: {Description}");
-        Console.WriteLine("Now, prepare to begin...");
+        Console.WriteLine("Prepare to begin...");
 
+        // Pause for a few seconds
         System.Threading.Thread.Sleep(3000);
 
+        // Get a random prompt
         Random random = new Random();
         int promptIndex = random.Next(0, Prompts.Count - 1);
         Console.WriteLine(Prompts[promptIndex]);
+
         System.Threading.Thread.Sleep(Duration * 1000);
 
         Console.WriteLine("Start listing...");
