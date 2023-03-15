@@ -73,3 +73,13 @@ public class GoalTracker
         }
 
     }
+
+    public class NegativeGoal : Goal
+
+    {
+        public NegativeGoal(string name, int points) : base(name, points)
+
+        {
+            this.points *= -1;
+        }
+
