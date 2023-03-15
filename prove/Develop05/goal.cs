@@ -28,3 +28,12 @@ public class Goal
 
         this.completed = false;
     }
+
+// Mark this goal as completed and return the points earned
+    public virtual int MarkCompleted()
+
+    {
+        completed = true;
+
+        return points;
+    }
