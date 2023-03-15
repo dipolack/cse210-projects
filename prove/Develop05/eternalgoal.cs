@@ -14,4 +14,13 @@ public class EternalGoal : Goal
         this.pointsPerRecording = pointsPerRecording;
     }
 
-    
+    //Hide the inherited RecordGoal method with a new implementation
+    public new int RecordGoal()
+
+    {
+        int pointsEarned = base.MarkCompleted();
+
+        pointsEarned += pointsPerRecording;
+
+        return pointsEarned;
+    }
