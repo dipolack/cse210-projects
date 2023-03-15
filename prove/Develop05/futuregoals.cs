@@ -1,3 +1,4 @@
+//adding futuregoal class to record additional goals for the future
 public class FutureGoal: Goal
 
 {
