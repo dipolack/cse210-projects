@@ -18,3 +18,24 @@ public class ChecklistGoal : Goal
 
         this.completedCount = 0;
     }
+
+    // Mark this goal as completed and return the points earned
+    public override int MarkCompleted()
+
+    {
+
+        int pointsEarned = base.MarkCompleted();
+
+        completedCount++;
+
+        if (completedCount == targetCount)
+
+        {
+            pointsEarned += pointsPerCompletion * targetCount;
+        }
+
+        else
+
+        {
+            pointsEarned += pointsPerCompletion;
+        }
