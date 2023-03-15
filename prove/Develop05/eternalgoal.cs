@@ -24,3 +24,12 @@ public class EternalGoal : Goal
 
         return pointsEarned;
     }
+
+    //Override GetDescription to show the total points earned so far
+    public override string GetDescription()
+
+    {
+        return $"{name} ({pointsPerRecording} points per recording, {base.GetDescription()}: {pointsPerRecording * Convert.ToInt32(completed)})";
+    }
+
+}
