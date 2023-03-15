@@ -145,3 +145,21 @@ public class GoalTracker
                 }
             }
         }
+
+        public List<string> GetGoalList()
+        {
+            List<string> goalList = new List<string>();
+
+            foreach (Goal goal in this.goals)
+            {
+                goalList.Add(goal.GetDescription());
+            }
+
+            return goalList;
+        }
+
+        public int GetScore()
+
+        {
+            return this.score;
+        }
