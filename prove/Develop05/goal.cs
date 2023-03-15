@@ -37,3 +37,12 @@ public class Goal
 
         return points;
     }
+
+// Get a string description of this goal
+    public virtual string GetDescription()
+
+    {
+        return $"{name} ({points} points) [{(completed ? "X" : " ")}]";
+    }
+
+}
