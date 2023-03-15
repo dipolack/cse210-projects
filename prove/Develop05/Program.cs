@@ -117,3 +117,17 @@ public class GoalTracker
             this.goals.Add(goal);
         }
 
+        public void MarkGoalCompleted(string goalName)
+
+        {
+            foreach (Goal goal in this.goals)
+            {
+                if (goal.getName == goalName)
+
+                {
+                    this.score += goal.MarkCompleted();
+
+                    return;
+                }
+            }
+        }
