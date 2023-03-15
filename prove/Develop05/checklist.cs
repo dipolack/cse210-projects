@@ -39,3 +39,7 @@ public class ChecklistGoal : Goal
         {
             pointsEarned += pointsPerCompletion;
         }
+        
+        return pointsEarned;
+
+    }
