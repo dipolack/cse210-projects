@@ -3,7 +3,6 @@
 public class EternalGoal : Goal
 
 {
-
     //Private attributes
     private int pointsPerRecording;
 
