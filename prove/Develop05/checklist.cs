@@ -39,7 +39,18 @@ public class ChecklistGoal : Goal
         {
             pointsEarned += pointsPerCompletion;
         }
-        
+
         return pointsEarned;
 
     }
+
+    // Override GetDescription to show the completion status
+    public override string GetDescription()
+
+    {
+
+        return $"{name} ({pointsPerCompletion} points per completion, {base.GetDescription()}: Completed {completedCount}/{targetCount} times)";
+
+    }
+
+}
