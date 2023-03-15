@@ -163,3 +163,41 @@ public class GoalTracker
         {
             return this.score;
         }
+
+ public void SaveData(string fileName)
+
+        {
+            using (StreamWriter writer = new StreamWriter(fileName))
+            {
+                writer.WriteLine(this.score);
+
+                foreach (Goal goal in this.goals)
+                {
+                    writer.WriteLine(goal.Serialize);
+                }
+            }
+        }
+
+        public void LoadData(string fileName)
+
+        {
+            this.goals.Clear();
+
+            using (StreamReader reader = new StreamReader(fileName))
+
+            {
+                this.score = int.Parse(reader.ReadLine());
+
+                string line;
+
+                while ((line = reader.ReadLine()) != null)
+
+                {
+                    Goal goal = Goal.Deserialize;
+
+                    this.goals.Add(goal);
+                }
+            }
+        }
+    }
+}
