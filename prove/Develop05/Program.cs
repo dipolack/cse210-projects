@@ -164,7 +164,7 @@ public class GoalTracker
             return this.score;
         }
 
- public void SaveData(string fileName)
+        public void SaveData(string fileName)
 
         {
             using (StreamWriter writer = new StreamWriter(fileName))
