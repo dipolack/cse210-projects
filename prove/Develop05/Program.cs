@@ -83,3 +83,37 @@ public class GoalTracker
             this.points *= -1;
         }
 
+   public override int MarkCompleted()
+
+        {
+            this.completed = true;
+
+            return this.points;
+        }
+
+        public override string GetDescription()
+
+        {
+            return $"{this.name}: {(this.completed ? "Completed" : "Incomplete")}, {this.points} points";
+        }
+
+    }
+
+    public class GoalTracker1
+
+    {
+        private List<Goal> goals;
+        private int score;
+        public GoalTracker1()
+        {
+            this.goals = new List<Goal>();
+
+            this.score = 0;
+        }
+
+        public void AddGoal(Goal goal)
+
+        {
+            this.goals.Add(goal);
+        }
+
