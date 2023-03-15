@@ -131,3 +131,17 @@ public class GoalTracker
                 }
             }
         }
+
+         public void RecordGoal(string goalName)
+
+        {
+            foreach (Goal goal in this.goals)
+            {
+                if (goal.getName == goalName)
+                {
+                    this.score += goal.RecordGoal;
+
+                    return;
+                }
+            }
+        }
