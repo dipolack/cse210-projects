@@ -1,5 +1,3 @@
-//Subclass for checklist goals that must be completed a certain number of times
-
 public class ChecklistGoal : Goal
 
 {
@@ -7,7 +5,8 @@ public class ChecklistGoal : Goal
     private int pointsPerCompletion;
     private int targetCount;
     private int completedCount;
-
+    public int GetPointsPerCompletion() { return pointsPerCompletion; }
+    public int GetTargetCount() { return targetCount; }
     //Constructor
     public ChecklistGoal(string name, int pointsPerCompletion, int targetCount) : base(name, 0)
 
@@ -17,6 +16,8 @@ public class ChecklistGoal : Goal
         this.targetCount = targetCount;
 
         this.completedCount = 0;
+
+        this.Type = "Checklist goal";
     }
 
     // Mark this goal as completed and return the points earned
@@ -49,8 +50,12 @@ public class ChecklistGoal : Goal
 
     {
 
-        return $"{name} ({pointsPerCompletion} points per completion, {base.GetDescription()}: Completed {completedCount}/{targetCount} times)";
+        return $"{Name} ({pointsPerCompletion} points per completion, {base.GetDescription()}: Completed {completedCount}/{targetCount} times)";
 
+    }
+    public int MaximumPossiblePoints()
+    {
+        return pointsPerCompletion * targetCount;
     }
 
 }

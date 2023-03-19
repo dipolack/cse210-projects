@@ -1,11 +1,8 @@
 public class Goal
-
 {
     // Private attributes
 
-    public string name;
-
-    public string getName;
+    public string Name { get;set; }
 
     public int RecordGoal;
 
@@ -13,36 +10,32 @@ public class Goal
 
     public static Goal Deserialize;
 
-    public int points;
+    public int Points{get;set;}
 
-    public bool completed;
+    public bool Completed { get; set; }
+    public string Type { get; set; }
+    public string getName() { return Name; }
 
 
     // Constructor
-    public Goal(string name, int points)
-
+    public Goal(string Name, int Points)
     {
-        this.name = name;
-
-        this.points = points;
-
-        this.completed = false;
+        this.Name = Name;
+        this.Points = Points;
+        this.Completed = false;
     }
 
 // Mark this goal as completed and return the points earned
     public virtual int MarkCompleted()
-
     {
-        completed = true;
-
-        return points;
+        Completed = true;
+        return Points;
     }
 
 // Get a string description of this goal
     public virtual string GetDescription()
-
     {
-        return $"{name} ({points} points) [{(completed ? "X" : " ")}]";
+        return $"{Name} ({Points} points) [{(Completed ? "X" : " ")}]";
     }
 
 }

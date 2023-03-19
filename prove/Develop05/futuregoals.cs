@@ -49,7 +49,7 @@ public class FutureGoal: Goal
 
     {
 
-        return $"{name} ({pointsPerCompletion} points per completion, {base.GetDescription()}: Completed {completedCount}/{targetCount} times)";
+        return $"{Name} ({pointsPerCompletion} points per completion, {base.GetDescription()}: Completed {completedCount}/{targetCount} times)";
 
     }
 
