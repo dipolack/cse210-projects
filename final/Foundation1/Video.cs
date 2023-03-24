@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-    public class Video
+public class Video
+
     {
         public string Title { get; set; }
         public string Author { get; set; }
