@@ -26,7 +26,7 @@ namespace ProductOrderingSystem
             Console.WriteLine("Order 1 - Total Price: ${0:F2}", order1.GetTotalPrice());
 
             Address address2 = new Address("575 3rd st", "Bronx", "NY", "USA");
-            Customer customer2 = new Customer("Janeth Deen", address2);
+            Customer customer2 = new Customer("Janeth" , address2);
 
             Product product3 = new Product("Product 3", 3, 20.00, 1);
 
