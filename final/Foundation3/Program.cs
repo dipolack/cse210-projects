@@ -11,7 +11,7 @@ class Program {
         Event genericEvent = new Event("Gardening Event", "Flowers in the Amazons", new DateTime(2023, 6, 1), new TimeSpan(19, 0, 0), address1);
         Lecture lecture = new Lecture("Let's talk dinosaurs", "Dinosaurs and their way of life", new DateTime(2023, 7, 1), new TimeSpan(13, 0, 0), address2, "Dr. Steven Craford", 50);
         Reception reception = new Reception("Speech therapists Anual Reception", "Anual Reception for speech therapists in the Tri-State area", new DateTime(2023, 8, 1), new TimeSpan(18, 0, 0), address3, "rsvp@therapistsunited.com");
-        OutdoorGathering outdoorGathering = new OutdoorGathering("A ride in the shore", "Motorcycle riding in the ocean shore", new DateTime(2023, 9, 1), new TimeSpan(11, 0, 0), address1, "Janeth Deen");
+        OutdoorGathering outdoorGathering = new OutdoorGathering("A ride in the shore", "Motorcycle riding in the ocean shore", new DateTime(2023, 9, 1), new TimeSpan(11, 0, 0), address1, "Cloudy");
 
         Console.WriteLine(genericEvent.GetStandardDetails());
         Console.WriteLine ();
